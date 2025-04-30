@@ -1,0 +1,76 @@
+.container {
+    display: flex;
+    gap: 20px;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+#main-input {
+    width: calc(100% - 20px);
+}
+
+#translated {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.chuck {
+    cursor: pointer;
+}
+
+.language {
+    cursor: pointer;
+    border: 1px solid black;
+    margin-right: 22px;
+}
+
+.inlang {
+    cursor: pointer;
+    border: 1px solid black;
+    margin-right: 12px;
+}
+
+.border {
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+.chuck:active {
+    transform: translateY(-10px);
+}
+
+.main-header {
+    text-align: center;
+    font-size: 18px;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mt-1 {
+    margin-top: 12px;
+}
+
+.mt-left {
+    margin-left: 30px;
+}
+
+.mt-left-deepl {
+    margin-left: 190px;
+}
+
+.grey-buttons > img {
+    filter: grayscale(75%);
+}
+
+.colorful {
+    filter: none !important;
+}

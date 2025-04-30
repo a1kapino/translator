@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparative Translator</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <body>
+        <script src="/static/scripts.js"></script>
+        <h1 class="main-header">Comparative Translator - Traductor Comparativo  -  Порівняльний Перекладач </h1>
+        <div class="container">
+            <div class="flex-1">
+                <textarea id="main-input" rows="16" ></textarea>
+                <a id="news-link" class="center" href="">link to news</a>
+            </div>
+            <div class="flex-1 center">
+                <div id="original-input">
+                    <br />
+                    <div class="text-center"> Enter keyword <input type="text" id="'word_input" size="14">  </div>
+                    <br />
+                    <div class="text-center"> then select language for a news item: </div>
+                    <br />
+                    <img src="/static/germany.png" width="75" height="63" class="inlang" onclick="fetchNews('de', 'de')">
+                    <img src="/static/britain.png" width="75" height="63" class="inlang" onclick="fetchNews('gb', 'en')">
+                    <img src="/static/france.png" width="75" height="63" class="inlang" onclick="fetchNews('fr', 'fr')">
+                    <img src="/static/spain.png" width="75" height="63" class="border" onclick="fetchNews('es', 'es')">
+                    <br />  
+                    <br />                   
+                    <img src="/static/italy.png" width="75" height="63" class="inlang" onclick="fetchNews('it', 'it')">
+                    <img src="/static/ukraine.png" width="75" height="63" class="inlang" onclick="fetchNews('ua', 'uk')">
+                    <img src="/static/poland.png" width="75" height="63" class="inlang" onclick="fetchNews('pl', 'pl')">
+                    <img src="/static/russia2.jpg" width="75" height="63" class="border" onclick="fetchNews('ru', 'ru')">
+                </div>               
+            </div>  
+            <div class="flex-1 mt-left">
+                <div id="joke-input">
+                    <button>            
+                    <img src="/static/chuck4.jpg" width="215" height="215" onclick="fetchJoke()" class="chuck" /> 
+                    <br />   
+                    <img src="/static/usa.png" style="float:right;width:48px;height:38px;" class="border" onclick="fetchJoke()">
+                    <br />
+                    Learn about Chuck Norris
+                    </buttom>
+                </div>
+            </div>    
+        </div>
+        <div class="center mt-1">
+            <div>
+                <div id="lang-selection">
+                    <p>Translate into -
+                    <img onclick="translateAndAppend(0, source_lang, 'en')" src="/static/usa.png" width="42" height="22" class="language">
+                    <img onclick="translateAndAppend(1, source_lang, 'de')" src="/static/germany.png" width="42" height="22" class="language">
+                    <img onclick="translateAndAppend(2, source_lang, 'en')" src="/static/britain.png" width="42" height="22" class="language">
+                    <img onclick="translateAndAppend(3, source_lang, 'fr')" src="/static/france.png" width="42" height="22" class="language">
+                    <img onclick="translateAndAppend(4, source_lang, 'es')" src="/static/spain.png" width="42" height="22" class="language">
+                    <img onclick="translateAndAppend(5, source_lang, 'it')" src="/static/italy.png" width="42" height="22" class="language">
+                    <img onclick="translateAndAppend(6, source_lang, 'uk')" src="/static/ukraine.png" width="42" height="22" class="language">
+                    <img onclick="translateAndAppend(7, source_lang, 'pl')" src="/static/poland.png" width="42" height="22" class="language">
+                    <img onclick="translateAndAppend(8, source_lang, 'ru')" src="/static/russia2.jpg" width="42" height="22" class="language">
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="flex-1 center">
+                <p> Google: </p>
+            </div>
+            <div class="flex-1 center"  >
+                <p> Microsoft: </p>
+            </div>  
+            <div class="flex-1 mt-left-deepl">
+                <p> DeepL: </p>
+            </div>
+        </div>
+        <div id="secondary-action">        
+        </div>
+    </body>
+</body>
+</html>
+
