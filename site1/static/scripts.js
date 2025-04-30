@@ -52,15 +52,15 @@ async function translateAndAppend(buttonIndex, source, dest) {
     
     const response = await fetch(`/api/translate?input=${currentTransation1}&source=${source}&dest=${dest}`);
     const response2 = await fetch(`/api/translate2?input=${currentTransation2}&source=${source}&dest=${dest}`);
-    const response3 = await fetch(`/api/translate3?input=${currentTransation3}&source=${source}&dest=${dest}`);
-    /*
+    let response3;
+
     if (buttonIndex == 0) {
         const destUS = 'en-US'
-        const response3 = await fetch(`/api/translate3?input=${currentTransation3}&source=${source}&dest=${destUS}`);
+        response3 = await fetch(`/api/translate3?input=${currentTransation3}&source=${source}&dest=${destUS}`);
     } else {
-        const response3 = await fetch(`/api/translate3?input=${currentTransation3}&source=${source}&dest=${dest}`);        
+        response3 = await fetch(`/api/translate3?input=${currentTransation3}&source=${source}&dest=${dest}`);        
     }
-     */   
+    
     const data = await response.json();
     const data2 = await response2.json();  
     const data3 = await response3.json();
